@@ -4,14 +4,14 @@ import html.HTMLLexer;
 import html.HTMLParser;
 import org.antlr.v4.runtime.*;
 
-public class Main {
+public class MainHTML {
     public static void main(String[] args) {
         String input = "<span>Price: $999</span>";
         HTMLLexer lexer = new HTMLLexer(CharStreams.fromString(input));
         HTMLParser parser = new HTMLParser(new CommonTokenStream(lexer));
         var tree = parser.document();
 
-        PrintVisitor visitor = new PrintVisitor();
+        PrintHTMLVisitor visitor = new PrintHTMLVisitor();
         visitor.visit(tree);
 
         System.out.println("✅ AST طُبعت بنجاح!");

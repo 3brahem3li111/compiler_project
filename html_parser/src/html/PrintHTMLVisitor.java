@@ -3,7 +3,7 @@ package html;
 import html.HTMLParser.*;
 import org.antlr.v4.runtime.Token;
 
-public class PrintVisitor extends HTMLParserBaseVisitor<Void> {
+public class PrintHTMLVisitor extends HTMLParserBaseVisitor<Void> {
 
     private int indent = 0;
 
