@@ -1,13 +1,16 @@
 lexer grammar HTMLLexer;
 
-LT : '<' ;
-GT : '>' ;
-SLASH : '/' ;
+OPEN_DIV  : '<div>' ;
+OPEN_P    : '<p>' ;
+OPEN_H1   : '<h1>' ;
+OPEN_SPAN : '<span>' ;
+OPEN_IMG  : '<img>' ;
 
-DIV  : 'div' ;
-P    : 'p' ;
-H1   : 'h1' ;
-SPAN : 'span' ;
-IMG  : 'img' ;
+CLOSE_DIV : '</div>' ;
+CLOSE_P   : '</p>' ;
+CLOSE_H1  : '</h1>' ;
+CLOSE_SPAN: '</span>' ;
+
+TEXT : ~[<>\r\n]+ ;
 
 WS : [ \t\r\n]+ -> skip ;

@@ -41,13 +41,13 @@ public class HTMLParserBaseListener implements HTMLParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSpanElement(HTMLParser.SpanElementContext ctx) { }
+	@Override public void enterPElement(HTMLParser.PElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSpanElement(HTMLParser.SpanElementContext ctx) { }
+	@Override public void exitPElement(HTMLParser.PElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -65,13 +65,13 @@ public class HTMLParserBaseListener implements HTMLParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPElement(HTMLParser.PElementContext ctx) { }
+	@Override public void enterSpanElement(HTMLParser.SpanElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPElement(HTMLParser.PElementContext ctx) { }
+	@Override public void exitSpanElement(HTMLParser.SpanElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -84,6 +84,30 @@ public class HTMLParserBaseListener implements HTMLParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitImgElement(HTMLParser.ImgElementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterContent(HTMLParser.ContentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitContent(HTMLParser.ContentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterItem(HTMLParser.ItemContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitItem(HTMLParser.ItemContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

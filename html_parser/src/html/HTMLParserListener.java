@@ -30,17 +30,17 @@ public interface HTMLParserListener extends ParseTreeListener {
 	 */
 	void exitDivElement(HTMLParser.DivElementContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code SpanElement}
+	 * Enter a parse tree produced by the {@code PElement}
 	 * labeled alternative in {@link HTMLParser#element}.
 	 * @param ctx the parse tree
 	 */
-	void enterSpanElement(HTMLParser.SpanElementContext ctx);
+	void enterPElement(HTMLParser.PElementContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code SpanElement}
+	 * Exit a parse tree produced by the {@code PElement}
 	 * labeled alternative in {@link HTMLParser#element}.
 	 * @param ctx the parse tree
 	 */
-	void exitSpanElement(HTMLParser.SpanElementContext ctx);
+	void exitPElement(HTMLParser.PElementContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code H1Element}
 	 * labeled alternative in {@link HTMLParser#element}.
@@ -54,17 +54,17 @@ public interface HTMLParserListener extends ParseTreeListener {
 	 */
 	void exitH1Element(HTMLParser.H1ElementContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code PElement}
+	 * Enter a parse tree produced by the {@code SpanElement}
 	 * labeled alternative in {@link HTMLParser#element}.
 	 * @param ctx the parse tree
 	 */
-	void enterPElement(HTMLParser.PElementContext ctx);
+	void enterSpanElement(HTMLParser.SpanElementContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code PElement}
+	 * Exit a parse tree produced by the {@code SpanElement}
 	 * labeled alternative in {@link HTMLParser#element}.
 	 * @param ctx the parse tree
 	 */
-	void exitPElement(HTMLParser.PElementContext ctx);
+	void exitSpanElement(HTMLParser.SpanElementContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code ImgElement}
 	 * labeled alternative in {@link HTMLParser#element}.
@@ -77,4 +77,24 @@ public interface HTMLParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitImgElement(HTMLParser.ImgElementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link HTMLParser#content}.
+	 * @param ctx the parse tree
+	 */
+	void enterContent(HTMLParser.ContentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link HTMLParser#content}.
+	 * @param ctx the parse tree
+	 */
+	void exitContent(HTMLParser.ContentContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link HTMLParser#item}.
+	 * @param ctx the parse tree
+	 */
+	void enterItem(HTMLParser.ItemContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link HTMLParser#item}.
+	 * @param ctx the parse tree
+	 */
+	void exitItem(HTMLParser.ItemContext ctx);
 }

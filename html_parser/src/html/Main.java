@@ -6,7 +6,7 @@ import org.antlr.v4.runtime.*;
 
 public class Main {
     public static void main(String[] args) {
-        String input = "<div><img></div>";
+        String input = "<span>Price: $999</span>";
         HTMLLexer lexer = new HTMLLexer(CharStreams.fromString(input));
         HTMLParser parser = new HTMLParser(new CommonTokenStream(lexer));
         var tree = parser.document();
