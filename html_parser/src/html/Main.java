@@ -6,10 +6,14 @@ import org.antlr.v4.runtime.*;
 
 public class Main {
     public static void main(String[] args) {
-        String input = "<div><p></p></div>";
+        String input = "<p></p>";
         HTMLLexer lexer = new HTMLLexer(CharStreams.fromString(input));
         HTMLParser parser = new HTMLParser(new CommonTokenStream(lexer));
-        parser.document();
-        System.out.println("✅ نجاح!");
+        var tree = parser.document();
+
+        PrintVisitor visitor = new PrintVisitor();
+        visitor.visit(tree);
+
+        System.out.println("✅ AST طُبعت بنجاح!");
     }
 }

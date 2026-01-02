@@ -18,13 +18,51 @@ public interface HTMLParserListener extends ParseTreeListener {
 	 */
 	void exitDocument(HTMLParser.DocumentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link HTMLParser#element}.
+	 * Enter a parse tree produced by the {@code DivElement}
+	 * labeled alternative in {@link HTMLParser#element}.
 	 * @param ctx the parse tree
 	 */
-	void enterElement(HTMLParser.ElementContext ctx);
+	void enterDivElement(HTMLParser.DivElementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link HTMLParser#element}.
+	 * Exit a parse tree produced by the {@code DivElement}
+	 * labeled alternative in {@link HTMLParser#element}.
 	 * @param ctx the parse tree
 	 */
-	void exitElement(HTMLParser.ElementContext ctx);
+	void exitDivElement(HTMLParser.DivElementContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code SpanElement}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 */
+	void enterSpanElement(HTMLParser.SpanElementContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code SpanElement}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 */
+	void exitSpanElement(HTMLParser.SpanElementContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code H1Element}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 */
+	void enterH1Element(HTMLParser.H1ElementContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code H1Element}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 */
+	void exitH1Element(HTMLParser.H1ElementContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code PElement}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 */
+	void enterPElement(HTMLParser.PElementContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code PElement}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 */
+	void exitPElement(HTMLParser.PElementContext ctx);
 }
