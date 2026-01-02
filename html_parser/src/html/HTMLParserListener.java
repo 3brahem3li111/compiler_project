@@ -65,4 +65,16 @@ public interface HTMLParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPElement(HTMLParser.PElementContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code ImgElement}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 */
+	void enterImgElement(HTMLParser.ImgElementContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code ImgElement}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 */
+	void exitImgElement(HTMLParser.ImgElementContext ctx);
 }

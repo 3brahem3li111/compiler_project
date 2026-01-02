@@ -44,4 +44,11 @@ public interface HTMLParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitPElement(HTMLParser.PElementContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ImgElement}
+	 * labeled alternative in {@link HTMLParser#element}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImgElement(HTMLParser.ImgElementContext ctx);
 }

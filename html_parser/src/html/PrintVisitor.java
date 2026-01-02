@@ -71,4 +71,12 @@ public class PrintVisitor extends HTMLParserBaseVisitor<Void> {
         indent--;
         return null;
     }
+
+    @Override
+    public Void visitImgElement(ImgElementContext ctx) {
+        Token startToken = ctx.start;
+        print("Element: img (line " + startToken.getLine() + ")");
+        // لا children لـ <img>
+        return null;
+    }
 }

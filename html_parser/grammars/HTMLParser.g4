@@ -9,4 +9,5 @@ element
     | LT SPAN GT (children+=element)* LT SLASH SPAN GT  # SpanElement
     | LT H1 GT (children+=element)* LT SLASH H1 GT      # H1Element
     | LT P GT (children+=element)* LT SLASH P GT        # PElement
+    | LT IMG GT                                         # ImgElement
     ;
